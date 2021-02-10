@@ -1,4 +1,4 @@
-package com.example.petclinic.domain;
+package com.example.petclinic.model;
 
 public class PetType {
 

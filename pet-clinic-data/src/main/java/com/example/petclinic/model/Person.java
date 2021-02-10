@@ -1,6 +1,4 @@
-package com.example.petclinic.domain;
-
-import javax.persistence.Entity;
+package com.example.petclinic.model;
 
 public class Person {
 
