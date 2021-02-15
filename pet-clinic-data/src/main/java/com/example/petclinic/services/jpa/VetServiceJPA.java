@@ -4,10 +4,12 @@ package com.example.petclinic.services.jpa;
 import com.example.petclinic.model.Vet;
 import com.example.petclinic.repositories.VetRepository;
 import com.example.petclinic.services.VetService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Profile("jpa")
 @Transactional
 public class VetServiceJPA extends AbstractJpaService<Vet, VetRepository> implements VetService {
 
