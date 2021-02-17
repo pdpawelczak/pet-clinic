@@ -1,5 +1,6 @@
 package com.example.petclinic.model;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -22,6 +23,7 @@ public class Owner extends Person{
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets = new HashSet<>();
 
+    @Builder
     public Owner(String firstName, String lastName, String address, String city, String telephone) {
         super(firstName, lastName);
         this.address = address;

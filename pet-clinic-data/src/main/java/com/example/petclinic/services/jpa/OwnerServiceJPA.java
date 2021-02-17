@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @Profile("jpa")
 @Transactional
@@ -19,5 +21,10 @@ public class OwnerServiceJPA extends AbstractJpaService<Owner, OwnerRepository> 
     @Override
     public Owner findByLastName(String lastName) {
         return repository.findByLastName(lastName);
+    }
+
+    @Override
+    public List<Owner> findAllByLastNameLike(String lastName) {
+        return repository.findAllByLastNameLike(lastName);
     }
 }
